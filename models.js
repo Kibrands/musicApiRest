@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Artist = mongoose.model('Artist',
-    new mongoose.Schema({ name: String, lastName: String, nick: String })
+    new mongoose.Schema({ name: String, lastName: String, nick: String, image: String })
 );
 
 const Song = mongoose.model('Song',

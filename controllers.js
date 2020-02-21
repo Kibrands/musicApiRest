@@ -27,7 +27,8 @@ exports.updateArtistById = (req, res) => {
             $set: {
                 name: req.body.name,
                 lastName: req.body.lastName,
-                nick: req.body.nick
+                nick: req.body.nick,
+                image: req.body.image
             }
         },
         (err, data) => {
@@ -41,7 +42,8 @@ exports.insertArtist = (req, res) => {
     const artist = new Artist({
         name: req.body.name,
         lastName: req.body.lastName,
-        nick: req.body.nick
+        nick: req.body.nick,
+        image: req.body.image
     });
     artist.save((err, data) => {
         if (err) res.json({ error: err });
