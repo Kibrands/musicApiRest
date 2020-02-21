@@ -1,5 +1,6 @@
-const { Artist, Song } = require("./models.js");
+const cors = require('cors');
 const express = require("express");
+const controller = require("./controllers.js");
 const router = express.Router();
 
 // API REST CRUD
@@ -7,12 +8,7 @@ const router = express.Router();
 // --------------------- ARTIST
 
 // READ ALL ARTISTS
-router.get("/artists", (req, res) => {
-    Artist.find({}, (err, data) => {
-        if (err) res.json({ error: err });
-        else res.json(data);
-    });
-});
+router.get("/artists", cors(), controller.readArtists);
 
 // READ AN ARTIST
 router.get("/artists/:id", (req, res) => {
