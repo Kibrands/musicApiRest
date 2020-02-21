@@ -77,7 +77,8 @@ exports.updateSongById = (req, res) => {
                 title: req.body.title,
                 price: req.body.price,
                 label: req.body.label,
-                releaseDate: req.body.releaseDate
+                releaseDate: req.body.releaseDate,
+                cover: req.body.cover
             }
         },
         (err, data) => {
@@ -92,7 +93,8 @@ exports.insertSong = (req, res) => {
         title: req.body.title,
         price: req.body.price,
         label: req.body.label,
-        releaseDate: req.body.releaseDate
+        releaseDate: req.body.releaseDate,
+        cover: req.body.cover
     });
     song.save((err, data) => {
         if (err) res.json({ error: err });
