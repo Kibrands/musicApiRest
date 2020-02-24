@@ -66,6 +66,13 @@ exports.readSongById = (req, res) => {
     });
 }
 
+exports.readSongByArtistId = (req, res) => {
+    Song.findOne({ artistId: req.params.artistId }, (err, data) => {
+        if (err) res.json({ error: err });
+        else res.json(data);
+    });
+}
+
 exports.deleteSongById = (req, res) => {
     Song.findOneAndRemove({ _id: req.params.id }, (err, data) => {
         if (err) res.json({ error: err });
