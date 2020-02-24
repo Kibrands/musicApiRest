@@ -30,8 +30,8 @@ router.get("/songs", cors(), controller.readSongs);
 // READ A SONG
 router.get("/songs/:id", cors(), controller.readSongById);
 
-// READ A SONG BY ARTIST ID
-router.get("/songs/artist/:artistId", cors(), controller.readSongByArtistId);
+// READ ALL SONGS BY ARTIST ID
+router.get("/songs/artist/:artistId", cors(), controller.readSongsByArtistId);
 
 // DELETE SONG
 router.delete("/songs/:id", cors(), controller.deleteSongById);
