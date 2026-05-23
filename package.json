@@ -17,6 +17,6 @@
         "path": "^0.12.7"
     },
     "devDependencies": {
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.22"
     }
 }
